@@ -234,7 +234,7 @@ points:
           key: 
             width: 2u
             shift: [.5u, 0]
-        delete:
+        dot:
           key:
             shift: [1u, 0]
       
