@@ -29,9 +29,18 @@ points:
         func10:
         func11:
         func12:
-        delete:
+        printscreen:
           key:
-            spread: 2.31u
+            spread: 1.31u
+        delete:
+
+        home:
+          key:
+            spread: 2.5u
+        insert:
+        pgup:
+        pgdn:
+
         
       
 
