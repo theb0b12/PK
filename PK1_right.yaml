@@ -40,10 +40,9 @@ points:
         insert:
         pgup:
         pgdn:
-
+      rows:
+        single:
         
-      
-
     r1:
       anchor:
         shift: [starting_x -.5kx , starting_y+1ky]
@@ -61,6 +60,9 @@ points:
           key:
             width: 2u
             spread: 1.5u
+
+      rows:
+        single:
         
     r2:
       anchor:
@@ -234,6 +236,9 @@ points:
           key:
             height: 2u
             shift: [0, -.5u]
+      
+      rows:
+        single:
     
     numpadr0r4:
       anchor:
@@ -251,12 +256,12 @@ points:
   
 
           
-# outlines:
+outlines:
 
-#   keys:
-#     - what: rectangle
-#       where: true
-#       size: [kx-0.5,ky-0.5]
+  keys:
+    - what: rectangle
+      where: true
+      size: [kx-0.5,ky-0.5]
 #     - what: rectangle
 #       where: [r3right_quotes_single]
 #       size: [kx*1.4, ky]
@@ -266,34 +271,24 @@ points:
 
 #       fillet: 2
 
-#   board_right:
-#     - what: polygon
-#       operation: stack
-#       points:
-#         - ref: r2right_delete_single
-#           shift: [0.5px, 0.5py]
-#         - ref: r2right_delete_single
-#           shift: [0.5px, -3ky - 0.5py]
-#         - ref: r5right_larrow_single
-#           shift: [-0.5px, -0.5py]
-#         # - ref: r5right_larrow_single
-#         #   shift: [-0.5px, 0]
-#         # - ref: thumbfanright_raise_single
-#         #   shift: [0.5px, 0]
-#         - ref: thumbfanright_raise_single
-#           shift: [0.3px, -0.5py]
-#         - ref: thumbfanright_space_single
-#           shift: [-0.25kx - 0.5px, -0.5py]
-#         - ref: thumbfanright_space_single
-#           shift: [-0.25kx - 0.5px - 0.5px, 1py]
-#         # - 
-#         #   orient: 60
-#         #   shift: [0, 55]
-#         - ref: thumbfanright_space_single
-#           shift: [-0.25kx - 0.5px - 0.5px, 3.4py]
+  outline:
+    - what: polygon
+      operation: stack
+      points:
+        - ref: r0_func6_single
+          shift: [-0.6px, 0.6py]
+        - ref: r0_pgdn_single
+          shift: [0.6px, 0.6py]
+        - ref: numpadr0r3_enter_single
+          shift: [0.6px, -1.2py]
+        - ref: r5_space_single
+          shift: [-1.6px, -0.8py]
+        - ref: r3_h_single
+          shift: [-1.6px, -0.8py]
 
 
-#       fillet: 3
+
+      fillet: 3
 
   
 
@@ -376,10 +371,10 @@ points:
 #     - operation: stack
 #       name: mounting
 
-#   combo:
-#     - name: board_right
-#     - operation: subtract
-#       name: keys
+  combo:
+    - name: outline
+    - operation: subtract
+      name: keys
 
 #   xlBoard:
 #     - name: board_right
