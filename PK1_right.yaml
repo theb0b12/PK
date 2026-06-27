@@ -1,18 +1,16 @@
 units:
-  # kx and ky allow for easy- easi-er switching between MX and Choc.
   kx: u
   ky: u
   px: kx + 2
   py: ky + 2
-  # These variables allow for updating the previews on https://ergogen.ceoloide.com
+  
   $default_width: u
   $default_height: u
-  # KiCAD places the PCB in the middle of nowhere to start with.
-  # These variables give a starting place for later shifts.
+
   starting_x: 100
   starting_y: -120
 
-  # Defaults to M2 Screws
+  # Default M2 Screws
   screwSize: 1
   standoffSize: 2.5
 
@@ -60,6 +58,7 @@ points:
           key:
             width: 2u
             spread: 1.5u
+            tags: key2u
 
       rows:
         single:
@@ -93,6 +92,7 @@ points:
           key:
             spread: 1.25u
             width: 1.5u
+            tags: key1.5u
       rows:
         single:
           row_net: P7
@@ -123,6 +123,7 @@ points:
           key:
             width: 2.25u
             spread: 1.62u
+            tags: key2.25u
       rows:
         single:
           row_net: P8
@@ -152,6 +153,7 @@ points:
             width: 1.75u
             spread: 1.38u
             column_net: P6
+            tags: key1.75u
       rows:
         single:
           row_net: P9
@@ -167,6 +169,7 @@ points:
             column_net: P0
             width: 2.75u
             shift: [-0.68u, 0]
+            tags: key2.75u
 
         rightalt:
           key:
@@ -216,6 +219,7 @@ points:
           key:
             height: 2u
             shift: [0, -.5u]
+            tags: vert2u
     
     numpadr0r2:
       anchor:
@@ -236,6 +240,7 @@ points:
           key:
             height: 2u
             shift: [0, -.5u]
+            tags: vert2u
       
       rows:
         single:
@@ -248,6 +253,7 @@ points:
           key: 
             width: 2u
             shift: [.5u, 0]
+            tags: key2u
         dot:
           key:
             shift: [1u, 0]
@@ -262,14 +268,26 @@ outlines:
     - what: rectangle
       where: true
       size: [kx-0.5,ky-0.5]
-#     - what: rectangle
-#       where: [r3right_quotes_single]
-#       size: [kx*1.4, ky]
-#     - what: rectangle
-#       where: [thumbfanright_space_single]
-#       size: [kx*1.5, ky]
-
-#       fillet: 2
+    - what: rectangle
+      where: [key2u]
+      size: [(kx*2)-0.5, ky-0.5]
+    - what: rectangle
+      where: [key1.5u]
+      size: [(kx*1.5)-0.5, ky-0.5]
+    - what: rectangle
+      where: [key2.75u]
+      size: [(kx*2.75)-0.5, ky-0.5]
+    - what: rectangle
+      where: [key2.25u]
+      size: [(kx*2.25)-0.5, ky-0.5]
+    - what: rectangle
+      where: [key1.75u]
+      size: [(kx*1.75)-0.5, ky-0.5]
+    - what: rectangle
+      where: [vert2u]
+      size: [(kx*1)-0.5, (2ky)-0.5]
+      
+      fillet: 2
 
   outline:
     - what: polygon
@@ -285,10 +303,8 @@ outlines:
           shift: [-1.6px, -0.8py]
         - ref: r3_h_single
           shift: [-1.6px, -0.8py]
-
-
-
-      fillet: 3
+          
+      fillet: 2
 
   
 
@@ -298,31 +314,6 @@ outlines:
 #         where:
 #           ref: [r2right_y_single]
 #           shift: [-0.5kx, 0]
-#       - what: circle
-#         radius: screwSize
-#         where:
-#           ref: [r3right_h_single]
-#           shift: [-0.9kx, -0.4ky]
-#       - what: circle
-#         radius: screwSize
-#         where:
-#           ref: [thumbfanright_raise_single]
-#           shift: [0.65kx, 0.5ky]
-#       - what: circle
-#         radius: screwSize
-#         where:
-#           ref: [r5right_larrow_single]
-#           shift: [-0.65kx, 0.3ky]
-#       - what: circle
-#         radius: screwSize
-#         where:
-#           ref: [r4right_slash_single]
-#           shift: [0.55kx, 0]
-#       - what: circle
-#         radius: screwSize
-#         where:
-#           ref: [r3right_quotes_single]
-#           shift: [0.6kx, 0.45ky]
 
 #   standoff:
 #       - what: circle
@@ -330,32 +321,6 @@ outlines:
 #         where:
 #           ref: [r2right_y_single]
 #           shift: [-0.5kx, 0]
-#       - what: circle
-#         radius: standoffSize
-#         where:
-#           ref: [r3right_h_single]
-#           shift: [-0.9kx, -0.4ky]
-#       - what: circle
-#         radius: standoffSize
-#         where:
-#           ref: [thumbfanright_raise_single]
-#           shift: [0.65kx, 0.5ky]
-#       - what: circle
-#         radius: standoffSize
-#         where:
-#           ref: [r5right_larrow_single]
-#           shift: [-0.65kx, 0.3ky]
-#       - what: circle
-#         radius: standoffSize
-#         where:
-#           ref: [r4right_slash_single]
-#           shift: [0.55kx, 0]
-#       - what: circle
-#         radius: standoffSize
-#         where:
-#           ref: [r3right_quotes_single]
-#           shift: [0.6kx, 0.45ky]
-
 
 #   switch_plate_keys:
 #         - what: rectangle
@@ -390,18 +355,15 @@ outlines:
 #   switch_plate:
 #     - name: xlBoard
 #     - operation: subtract
-#       name: switch_plate_keys
-
-
-  
+#       name: switch_plate_keys  
 
 pcbs:
   right_pcbv2:
     template: kicad8
 
-    # outlines:
-    #   main:
-    #     outline: board_right
+    outlines:
+      main:
+        outline: outline
 
     footprints:
       choc_hotswap:
@@ -468,31 +430,6 @@ pcbs:
 #         where:
 #           ref: [r2right_y_single]
 #           shift: [-0.5kx, 0]
-#       screwhole2:
-#         what: ceoloide/mounting_hole_npth
-#         where:
-#           ref: [r3right_h_single]
-#           shift: [-0.9kx, -0.4ky]
-#       screwhole3:
-#         what: ceoloide/mounting_hole_npth
-#         where:
-#           ref: [thumbfanright_raise_single]
-#           shift: [0.65kx, 0.5ky]
-#       screwhole4:
-#         what: ceoloide/mounting_hole_npth
-#         where:
-#           ref: [r5right_larrow_single]
-#           shift: [-0.65kx, 0.3ky]
-#       screwhole5:
-#         what: ceoloide/mounting_hole_npth
-#         where:
-#           ref: [r4right_slash_single]
-#           shift: [0.55kx, 0]
-#       screwhole6:
-#         what: ceoloide/mounting_hole_npth
-#         where:
-#           ref: [r3right_quotes_single]
-#           shift: [0.6kx, 0.45ky]
 
   
 
@@ -532,4 +469,3 @@ pcbs:
 #     - name: switch_plate
 #       extrude: 2
 #       shift: [0,0,5]
-    
