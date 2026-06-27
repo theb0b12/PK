@@ -366,14 +366,6 @@ pcbs:
         outline: outline
 
     footprints:
-      choc_hotswap:
-        what: ceoloide/switch_choc_v1_v2
-        where: true
-        params:
-          hotswap: true
-          from: "{{column_net}}"
-          to: "{{colrow}}"
-          include_stabilizer_pad: false
 
       mx_hotswap:
         what: ceoloide/switch_mx
@@ -392,7 +384,7 @@ pcbs:
           from: "{{colrow}}"
           to: "{{row_net}}"
         adjust:
-          shift: [0, -8]
+          shift: [0, -9]
 
 #       nicenano:
 #         what: ceoloide/mcu_nice_nano
@@ -469,3 +461,4 @@ pcbs:
 #     - name: switch_plate
 #       extrude: 2
 #       shift: [0,0,5]
+    
