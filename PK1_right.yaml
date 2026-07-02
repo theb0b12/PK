@@ -295,12 +295,12 @@ outlines:
       points:
         - ref: r0_func6_single
           shift: [-0.6px, 0.6py]
-        - ref: r0_pgdn_single
-          shift: [0.6px, 0.6py]
+        - ref: r0_func6_single
+          shift: [13.1px, 0.6py]
         - ref: numpadr0r3_enter_single
           shift: [0.6px, -1.2py]
-        - ref: r5_space_single
-          shift: [-1.6px, -0.8py]
+        - ref: numpadr0r3_enter_single
+          shift: [-12px, -1.2py]
         - ref: r3_h_single
           shift: [-1.6px, -0.8py]
           
