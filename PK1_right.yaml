@@ -21,47 +21,68 @@ points:
         shift: ["starting_x-.5u -6", "starting_y+2ky+3"]
       columns:
         func6:
+          key.column_net: P0
         func7:
+          key.column_net: P1
         func8:
+          key.column_net: P2
         func9:
+          key.column_net: P3
         func10:
+          key.column_net: P4
         func11:
+          key.column_net: P5
         func12:
+          key.column_net: P6
         printscreen:
           key:
             spread: 1.31u
+            column_net: P7
         delete:
+          key.column_net: P8
 
         home:
           key:
             spread: 2.5u
+            column_net: P9
         insert:
+          key.column_net: P10
         pgup:
+          key.column_net: P11
         pgdn:
+          key.column_net: P12
       rows:
         single:
+          row_net: P13
         
     r1:
       anchor:
         shift: [starting_x -.5kx , starting_y+1ky]
       columns:
         num6:
-          key:
-
+          key.column_net: P0
         num7:
+          key.column_net: P1
         num8:
+          key.column_net: P2
         num9:
+          key.column_net: P3
         num10:
+          key.column_net: P4
         hyphen:
+          key.column_net: P5
         equals:
+          key.column_net: P6
         backspc:
           key:
             width: 2u
             spread: 1.5u
             tags: key2u
+            column_net: P7
 
       rows:
         single:
+          row_net: P14
         
     r2:
       anchor:
@@ -93,10 +114,10 @@ points:
             spread: 1.25u
             width: 1.5u
             tags: key1.5u
+            column_net: P7
       rows:
         single:
-          row_net: P7
-
+          row_net: P15
     r3:
       anchor:
         shift: ["starting_x +5", "starting_y - ky"]
@@ -124,9 +145,10 @@ points:
             width: 2.25u
             spread: 1.62u
             tags: key2.25u
+            column_net: P6
       rows:
         single:
-          row_net: P8
+          row_net: P16
 
     r4:
       anchor:
@@ -135,28 +157,30 @@ points:
 
         n: 
           key: 
-            column_net: P1 
+            column_net: P0 
         m: 
           key: 
-            column_net: P2 
+            column_net: P1 
         comma: 
           key: 
-            column_net: P3
+            column_net: P2
         period:
           key:
-            column_net: P4
+            column_net: P3
         slash:
           key:
-            column_net: P5
+            column_net: P4
         shift:
           key:
             width: 1.75u
             spread: 1.38u
-            column_net: P6
             tags: key1.75u
+
+            column_net: P5
+
       rows:
         single:
-          row_net: P9
+          row_net: P17
 
 
 
@@ -166,21 +190,24 @@ points:
       columns:
         space:
           key:
-            column_net: P0
             width: 2.75u
             shift: [-0.68u, 0]
             tags: key2.75u
 
+            column_net: P0
         rightalt:
           key:
             spread: 1.25u
+
             column_net: P1
         fn:
+          key.column_net: P2
         rcntrl:
+          key.column_net: P3
 
       rows:
         single:
-          row_net: P14
+          row_net: P18
 
 # arrowkeys
     arrowkeysr0:
@@ -188,14 +215,24 @@ points:
         shift: ["starting_x + 7.8u", "starting_y - 2ky-3"]
       columns:
         up:
+          key.column_net: P6
+      rows:
+        single:
+          row_net: P17
 
     arrowkeysr1:
       anchor:
         shift: ["starting_x + 6.8u", "starting_y - 3ky-3"]
       columns:      
         left:
+          key.column_net: P4
         down:
+          key.column_net: P5
         right:
+          key.column_net: P6
+      rows:
+        single:
+          row_net: P18
     
 
 # numpad
@@ -204,46 +241,72 @@ points:
         shift: ["starting_x + 10u", "starting_y +1ky"]
       columns:
         num:
+          key.column_net: P8
         slash:
+          key.column_net: P9
         star:
+          key.column_net: P10
         minus:
+          key.column_net: P11
+      rows:
+        single:
+          row_net: P14
         
     numpadr0r1:
       anchor:
         shift: ["starting_x + 10u", "starting_y"]
       columns:      
         7:
+          key.column_net: P8
         8:
+          key.column_net: P9
         9:
+          key.column_net: P10
         plus:
           key:
             height: 2u
             shift: [0, -.5u]
             tags: vert2u
+            column_net: P11
+      rows:
+        single:
+          row_net: P15
     
     numpadr0r2:
       anchor:
         shift: ["starting_x + 10u", "starting_y-1ky"]
       columns:      
         4:
+          key.column_net: P7
         5:
+          key.column_net: P8
         6:
+          key.column_net: P9
+      rows:
+        single:
+          row_net: P16
     
     numpadr0r3:
       anchor:
         shift: ["starting_x + 10u", "starting_y-2ky"]
       columns:      
         1:
+          key.column_net: P7
         2:
+          key.column_net: P8
         3:
+          key.column_net: P9
         enter:
           key:
             height: 2u
             shift: [0, -.5u]
             tags: vert2u
+
+            column_net: P10
       
       rows:
         single:
+          row_net: P17
     
     numpadr0r4:
       anchor:
@@ -254,9 +317,15 @@ points:
             width: 2u
             shift: [.5u, 0]
             tags: key2u
+
+            column_net: P7
         dot:
           key:
             shift: [1u, 0]
+            column_net: P8
+      rows:
+        single:
+          row_net: P18
       
 
   
@@ -358,7 +427,7 @@ outlines:
 #       name: switch_plate_keys  
 
 pcbs:
-  right_pcbv2:
+  PK1_right:
     template: kicad8
 
     outlines:
@@ -386,11 +455,17 @@ pcbs:
         adjust:
           shift: [0, -9]
 
-#       nicenano:
-#         what: ceoloide/mcu_nice_nano
-#         where:
-#           ref: r2right_y_single
-#           shift: [-1.1kx, -0.32ky]
+      nicenano:
+        what: ceoloide/mcu_nice_nano
+        where:
+          ref: r0_delete_single
+          shift: [1.3kx, -0.3ky]
+        params:
+          include_extra_pins: true
+          P101: "P11"
+          P102: "P12"
+          P107: "P13"
+
         
 #       battery_connector:
 #         what: ceoloide/battery_connector_jst_ph_2
